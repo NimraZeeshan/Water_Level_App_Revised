@@ -9,6 +9,10 @@ class WaterUsageGraph extends StatefulWidget {
 }
 
 class _WaterUsageGraphState extends State<WaterUsageGraph> {
+  List<Color> gradientColors = [
+    const Color(0xff23b6e6),
+    const Color(0xff02d39a),
+  ];
   @override
   Widget build(BuildContext context) {
     return SfCartesianChart(
@@ -20,7 +24,8 @@ class _WaterUsageGraphState extends State<WaterUsageGraph> {
           Colors.pink,
         ],
         title: ChartTitle(
-          text: ('MY chart area'),
+          textStyle: TextStyle(fontWeight: FontWeight.w900),
+          text: ('MY chart area\nAverage usage 60L'),
         ),
         series: <ChartSeries>[
           AreaSeries<WaterUsageData, double>(
