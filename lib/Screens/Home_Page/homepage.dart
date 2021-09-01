@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_3/Screens/components/graph/water_usage.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
+// import 'package:syncfusion_flutter_charts/charts.dart';
+// import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -11,8 +14,6 @@ class MyHomePage extends StatelessWidget {
     DateTime now = DateTime.now();
     String formattedDate = DateFormat('EEE d M, y').format(now);
     return Scaffold(
-        //drawer: Drawer(),
-
         body: Stack(
       children: <Widget>[
         Container(
@@ -108,6 +109,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ],
               ),
+              child: WaterUsageGraph(),
             ),
           ],
         ),
